@@ -63,8 +63,6 @@ condition:
     # read ans
     li $v0, 5
     syscall
-    add $t5, $0, $v0
-
     beq $v0, 0, loop
     beq $v0, 1, done
     j condition
