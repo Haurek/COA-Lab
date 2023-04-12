@@ -5,7 +5,7 @@ module datapath(
     input   logic [2:0] alucontrol,
     input   logic [31:0] readdata,
     input   logic [31:0] instr,
-    output  logic zf, of, nf, cf,
+    output  logic zf,
     output  logic [31:0] pc, writedata, aluout);
     
     logic [4:0] WriteReg;
@@ -24,7 +24,7 @@ module datapath(
     
     //register file logic
     regfile     rf(.clk(clk),
-                   .E3(regwrite), 
+                   .WE3(regwrite), 
                    .A1(instr[25:21]), 
                    .A2(instr[20:16]),
                    .A3(WriteReg),
@@ -43,9 +43,6 @@ module datapath(
                     .srcb(SrcB), 
                     .ctr(alucontrol), 
                     .out(aluout), 
-                    .zf(zf),
-                    .of(of),
-                    .cf(cf),
-                    .nf(nf));               
+                    .zf(zf));               
                                                             
 endmodule

@@ -8,16 +8,13 @@ module MIPS(
     
     logic MemtoReg, Branch, PCSrc, Jump,
           ALUSrc, RegDest, RegWrite, ImmExt;
-    logic ZF, CF, OF, NF;          
+    logic ZF;    
     logic [2:0] ALUControl;
     
     controller c(.opcode(instr[31:26]),
                  .funct(instr[5:0]),
                  .zf(ZF), 
-                 .cf(CF),
-                 .of(OF),
-                 .nf(NF),
-                 .memtoreg(MemtpReg),
+                 .memtoreg(MemtoReg),
                  .alusrc(ALUSrc),
                  .regdest(RegDest),
                  .regwrite(RegWrite),

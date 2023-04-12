@@ -8,7 +8,7 @@ module maindec(
     
     assign {regwrite, regdest, alusrc, branch, 
             memwrite, memtoreg, jump, aluop, 
-            immext, brancgbne} = controls;
+            immext, branchbne} = controls;
     
     always_comb            
     case(op)

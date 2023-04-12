@@ -1,16 +1,17 @@
 module controller(
     input   logic [5:0] funct, opcode,
-    input   logic       zf, of, nf, cf,
+    input   logic       zf,
     output  logic [2:0] alucontrol,
     output  logic       memwrite, regwrite, 
-                        regdest, alusrc, immext
+                        regdest, alusrc, immext,
                         memtoreg, pcsrc, jump                                    
     );
     
     logic branch, branchbne;
     logic [2:0] ALUOp;
 
-    maindec md(.memwrite(memwrite),
+    maindec md(.op(opcode),
+               .memwrite(memwrite),
                .regwrite(regwrite),
                .regdest(regdest),
                .memtoreg(memtoreg),
@@ -25,6 +26,6 @@ module controller(
               .f(funct),
               .aluctrl(alucontrol));       
     
-    assign pcsrc = (branch & zf) | (branch & (~zf));                 
+    assign pcsrc = (branch & zf) | (branchbne & (~zf));                 
         
 endmodule
