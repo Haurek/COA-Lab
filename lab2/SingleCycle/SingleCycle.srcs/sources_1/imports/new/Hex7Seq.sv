@@ -1,5 +1,5 @@
 module Hex7Seg(
-    input logic [3:0] data,
+    input logic [4:0] data,
     output logic [6:0] a2g);
     
     always_comb
@@ -20,6 +20,7 @@ module Hex7Seg(
             'hD: a2g = 7'b1000010; 
             'hE: a2g = 7'b0110000; 
             'hF: a2g = 7'b0111000; 
+            'h10: a2g = 7'b1110110; //=
         default: a2g = 7'b0000001; //0
         endcase
 endmodule

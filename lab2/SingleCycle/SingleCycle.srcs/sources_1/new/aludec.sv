@@ -8,6 +8,7 @@ module aludec(
         3'b000: aluctrl <= 3'b010; // ADD
         3'b001: aluctrl <= 3'b110; // SUB
         3'b010: case(f)
+            6'b000000: aluctrl <= 3'b010; // nop
             6'b100000: aluctrl <= 3'b010; // add
             6'b100010: aluctrl <= 3'b110; // sub
             6'b100100: aluctrl <= 3'b000; // and

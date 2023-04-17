@@ -60,5 +60,5 @@ module x7Seg(
         if (reset == 1) clkdiv <= 0;
         else clkdiv <= clkdiv + 1;
         
-    Hex7Seg s7(.data(digit), .a2g(a2g));         
+    Hex7Seg s7(.data(data), .a2g(a2g));         
 endmodule
