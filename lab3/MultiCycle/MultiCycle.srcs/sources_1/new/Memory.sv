@@ -8,7 +8,8 @@ module Memory(
     logic [31:0] RAM[1023:0];
     
     initial
-        $readmemh("memfile.dat", RAM);
+//        $readmemh("memfile.dat", RAM);
+        $readmemh("memfile2.dat", RAM);
     
     assign RD = RAM[A[31:2]];
     always_ff @(posedge clk)

@@ -19,7 +19,7 @@ module datapath(
     logic [31:0] RD1, RD2, A, B;
     
     logic [31:0] SrcA, SrcB;
-    logic [31:0] ALUResult, ALUOut;
+    logic [31:0] ALUResult, ALUOut, Result;
     
     // PC logic
     mux3 #(32)  pcmux(.select(pcsrc), .d0(ALUResult), .d1(ALUOut), .d2({PCNext[31:28], Instr[25:0], 2'b00}), .y(PCNext));
@@ -36,6 +36,10 @@ module datapath(
                           .en(irwrite),
                           .in(readdata),
                           .out(Instr));
+                          
+    assign op = Instr[31:26];
+    assign funct = Instr[5:0];
+                             
     flopr #(32) datareg(.clk(clk),
                         .reset(reset),
                         .in(readdata),
@@ -47,7 +51,7 @@ module datapath(
                    .A1(Instr[25:21]), 
                    .A2(Instr[20:16]),
                    .A3(WriteReg),
-                   .WD3(ALUOut),
+                   .WD3(Result),
                    .RD1(RD1),
                    .RD2(RD2));
     mux2 #(5)   wrmux(.select(regdst), .t(Instr[15:11]), .f(Instr[20:16]), .y(WriteReg));
@@ -56,7 +60,7 @@ module datapath(
     sl2         immsh(.in(SignImm), .out(SignImmSh));
     flopr #(32) rd1reg(.clk(clk), .reset(reset), .in(RD1), .out(A));
     flopr #(32) rd2reg(.clk(clk), .reset(reset), .in(RD2), .out(B));
-    
+    assign writedata = B;
     // ALU logic 
     mux2 #(32) srcamux(.select(alusrca), .t(A), .f(PC), .y(SrcA));
     mux4 #(32) srcbmux(.select(alusrcb), .d0(B), .d1(4), .d2(SignImm), .d3(SignImmSh), .y(SrcB));

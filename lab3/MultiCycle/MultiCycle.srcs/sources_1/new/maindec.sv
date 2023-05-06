@@ -23,8 +23,8 @@ module maindec(
     localparam ORIEX   = 5'b01110;
     localparam ORIWB   = 5'b01111;
     localparam BNEEX   = 5'b10000;
-//    localparam    = 5'b10001;
-//    localparam    = 5'b10010;
+    localparam SLTIEX  = 5'b10001;
+    localparam SLTIWB  = 5'b10010;
     
     localparam LW      = 6'b100011;
     localparam SW      = 6'b101011;
@@ -34,6 +34,7 @@ module maindec(
     localparam ADDI    = 6'b001000;
     localparam ANDI    = 6'b001100;
     localparam ORI     = 6'b001101;
+    localparam SLTI    = 6'b001010;
     localparam J       = 6'b000010;
     
     logic [4:0]  state, nextstate;
@@ -56,6 +57,7 @@ module maindec(
                 ANDI:    nextstate = ANDIEX;
                 ORI:     nextstate = ORIEX;
                 ADDI:    nextstate = ADDIEX;
+                SLTI:    nextstate = SLTIEX;
                 J:       nextstate = JEX;
                 default: nextstate = 5'bx;
             endcase
@@ -78,6 +80,8 @@ module maindec(
             ORIWB:  nextstate  = FETCH;
             ADDIEX:  nextstate = ADDIWB;
             ADDIWB:  nextstate = FETCH;
+            SLTIEX:  nextstate = SLTIWB;
+            SLTIWB:  nextstate = FETCH;
             JEX:     nextstate = FETCH;
             default: nextstate = 5'bx;
         endcase
@@ -95,7 +99,7 @@ module maindec(
                 MEMWB:    controls = 17'b00010001000000000;
                 MEMWR:    controls = 17'b01000010000000000;
                 RTYPEEX:  controls = 17'b00001000000000100;
-                RTYPEWB:  controls = 17'b00010000010000000;
+                RTYPEWB:  controls = 17'b00010000110000000;
                 BEQEX:    controls = 17'b00001100000010010;
                 BNEEX:    controls = 17'b00001100000010011;
                 ADDIEX:   controls = 17'b00001000010000000;
@@ -104,6 +108,8 @@ module maindec(
                 ANDIWB:   controls = 17'b00010000000000000;
                 ORIEX:    controls = 17'b00001000010000110;
                 ORIWB:    controls = 17'b00010000000000000;
+                SLTIEX:   controls = 17'b00001000010001110;
+                SLTIWB:   controls = 17'b00010000000000000;
                 JEX:      controls = 17'b10000000000100000;
                 default:  controls = 17'bx;
             endcase     
