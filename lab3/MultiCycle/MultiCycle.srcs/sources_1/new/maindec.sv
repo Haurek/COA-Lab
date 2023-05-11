@@ -76,8 +76,8 @@ module maindec(
             BNEEX:   nextstate = FETCH;
             ANDIEX:  nextstate = ANDIWB;
             ANDIWB:  nextstate = FETCH;
-            ORIEX:  nextstate  = ORIWB;
-            ORIWB:  nextstate  = FETCH;
+            ORIEX:   nextstate = ORIWB;
+            ORIWB:   nextstate = FETCH;
             ADDIEX:  nextstate = ADDIWB;
             ADDIWB:  nextstate = FETCH;
             SLTIEX:  nextstate = SLTIWB;

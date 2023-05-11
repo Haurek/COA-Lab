@@ -28,18 +28,17 @@ module datapath(
                       .en(pcen), 
                       .in(PCNext),
                       .out(PC));
-    mux2 #(32)  idmux(.select(iord), .t(ALUOut), .f(PC), .y(adr));
     
     // Memory logic
+    mux2 #(32)  idmux(.select(iord), .t(ALUOut), .f(PC), .y(adr));                          
+    assign op = Instr[31:26];
+    assign funct = Instr[5:0];
+    assign writedata = B;
     latch #(32) instrreg (.clk(clk),
                           .reset(reset),
                           .en(irwrite),
                           .in(readdata),
-                          .out(Instr));
-                          
-    assign op = Instr[31:26];
-    assign funct = Instr[5:0];
-                             
+                          .out(Instr));                    
     flopr #(32) datareg(.clk(clk),
                         .reset(reset),
                         .in(readdata),
@@ -60,7 +59,7 @@ module datapath(
     sl2         immsh(.in(SignImm), .out(SignImmSh));
     flopr #(32) rd1reg(.clk(clk), .reset(reset), .in(RD1), .out(A));
     flopr #(32) rd2reg(.clk(clk), .reset(reset), .in(RD2), .out(B));
-    assign writedata = B;
+    
     // ALU logic 
     mux2 #(32) srcamux(.select(alusrca), .t(A), .f(PC), .y(SrcA));
     mux4 #(32) srcbmux(.select(alusrcb), .d0(B), .d1(4), .d2(SignImm), .d3(SignImmSh), .y(SrcB));
