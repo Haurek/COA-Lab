@@ -33,11 +33,11 @@ cache::cache(unsigned b, unsigned a, unsigned long d, replace r, unsigned m, wri
     init();
 }
 
-void cache::setConfig(std::ifstream &cfg) 
+cache::cache(std::ifstream &configfile)
 {
     int line = 0;
     std::string data;
-    while (std::getline(cfg, data))
+    while (std::getline(configfile, data))
     {
         switch (line)
         {
@@ -338,7 +338,7 @@ void cache::run(const std::string &data)
                         {
 							lines[i].dirty = true;
                         }
-                        else if (replace_strategy == WRITEALLOCATE)
+                        else if (write_strategy == WRITEALLOCATE)
                         {
                             run_time += cost;
                         }
@@ -488,11 +488,11 @@ void cache::run(const std::string &data)
                     {
                         // write hit
                         store_hit++;
-                        if (replace_strategy == WRITEBACK)
+                        if (write_strategy == WRITEBACK)
                         {
                             lines[num * set_size + i].dirty = true;
                         }
-                        else if (replace_strategy == WRITEALLOCATE)
+                        else if (write_strategy == WRITEALLOCATE)
                         {
                             run_time += cost;
                         }

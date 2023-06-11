@@ -3,7 +3,20 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "config.h"
+
+const long MAX_LINE = 65536;
+
+enum associate {
+    FULLASSOCIATE, DIRECT, SETASSOCIATE
+};
+
+enum replace {
+    RANDOM, LRU
+};
+
+enum write {
+    WRITEBACK, WRITEALLOCATE
+};
 
 struct line {
     bool valid;
@@ -47,6 +60,7 @@ private:
 public:
     cache();
     cache(unsigned b, unsigned a, unsigned long d, replace r, unsigned m, write w);
+    cache(std::ifstream &configfile);
     void setConfig(std::ifstream &cfg);
     void run(const std::string &data);
     friend std::ostream& operator<<(std::ostream &os, const cache &item);
