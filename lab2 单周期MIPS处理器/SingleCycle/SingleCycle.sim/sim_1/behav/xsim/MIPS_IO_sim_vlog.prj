@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../SingleCycle.srcs/sources_1/imports/new/Hex7Seq.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/IO.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/MIPS.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/MIPS_Top.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/adder.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/alu.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/aludec.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/controller.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/dMemoryDecoder.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/datapath.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/flopr.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/imem.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/maindec.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/mipsmem.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/mux2.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/regfile.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/signext.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/sl2.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/x7Seg.sv" \
+"../../../../SingleCycle.srcs/sources_1/new/zeroext.sv" \
+"../../../../SingleCycle.srcs/sim_1/new/MIPS_IO_sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

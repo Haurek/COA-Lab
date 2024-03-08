@@ -1,0 +1,27 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sim_1/new/MIPS_IO_sim.sv,1681264052,systemVerilog,,,,MIPS_IO_sim,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sim_1/new/MIPS_sim.sv,1681640760,systemVerilog,,,,MIPS_sim,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/imports/new/Hex7Seq.sv,1681564537,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/IO.sv,,Hex7Seg,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/IO.sv,1681562545,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/MIPS.sv,,IO,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/MIPS.sv,1680053515,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/MIPS_Top.sv,,MIPS,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/MIPS_Top.sv,1681558489,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/adder.sv,,MIPS_Top,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/adder.sv,1679659944,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/alu.sv,,adder,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/alu.sv,1681260852,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/aludec.sv,,alu,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/aludec.sv,1679715972,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/controller.sv,,aludec,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/controller.sv,1681140412,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/dMemoryDecoder.sv,,controller,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/dMemoryDecoder.sv,1681556786,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/datapath.sv,,dMemoryDecoder,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/datapath.sv,1681136401,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/flopr.sv,,datapath,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/flopr.sv,1681135249,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/imem.sv,,flopr,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/imem.sv,1681641526,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/maindec.sv,,imem,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/maindec.sv,1681187139,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/mipsmem.sv,,maindec,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/mipsmem.sv,1681560928,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/mux2.sv,,mipsmem,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/mux2.sv,1679623294,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/regfile.sv,,mux2,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/regfile.sv,1679662883,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/signext.sv,,regfile,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/signext.sv,1679661767,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/sl2.sv,,signext,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/sl2.sv,1681259551,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/x7Seg.sv,,sl2,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/x7Seg.sv,1681563950,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/zeroext.sv,,x7Seg,,,,,,,,
+D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sources_1/new/zeroext.sv,1679714974,systemVerilog,,D:/Github/COA_Lab/lab2/SingleCycle/SingleCycle.srcs/sim_1/new/MIPS_IO_sim.sv,,zeroext,,,,,,,,

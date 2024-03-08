@@ -1,6 +1,4 @@
-# COA_Lab
-
-This the labs of computer composition and architecture
+# 计算机组成原理课程lab
 
 ## Lab1
 
@@ -37,3 +35,21 @@ This the labs of computer composition and architecture
 
 ### 实验目的
 
+- 设计多周期MIPS处理器，包括
+  - 完成多周期MIPS处理器的设计；
+  - 在Vivado软件上进行仿真；
+  - 编写MIPS代码验证多周期MIPS处理器；
+  - 在NEXYS4 DDR板上进行验证(**都不做要求**)。
+
+## Lab4
+
+### 实验目的
+
+- 完成cache模拟器
+- 理解cache块大小对cache性能的影响
+- 理解cache关联性对cache性能的影响
+
+- 理解cache总大小对cache性能的影响
+
+- 理解cache替换策略对cache性能的影响
+- 理解cache写回策略对cache性能的影响
